@@ -26,6 +26,7 @@
             {% csrf_token %}
             {{ form.title.errors }} {{ form.title.label_tag }} {{ form.title }}
             {{ form.content.errors }} {{ form.content.label_tag }} {{ form.content }}
+            {{ form.author.errors }} {{ form.author.label_tag }} {{ form.author }}
             {{ form.img.errors }} {{ form.img.label_tag }} {{ form.img }}
             <input type="submit" value="Submit">
         </form>
