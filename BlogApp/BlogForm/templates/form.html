@@ -30,15 +30,6 @@
             {{ form.img.errors }} {{ form.img.label_tag }} {{ form.img }}
             <input type="submit" value="Submit">
         </form>
-        
-
-        <h2>List of Items</h2>
-        <ul>
-            {% for item in items %}
-                <li>{{ item.title }} | {{ item.content }}</li>
-                <img src="{{ item.img.url }}" alt="" style="width: 200px;">
-            {% endfor %}
-        </ul>
         </div>
       </div>
     </div>

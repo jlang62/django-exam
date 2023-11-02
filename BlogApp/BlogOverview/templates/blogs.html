@@ -46,17 +46,23 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 d-flex flex-column align-items-center">
           {% for item in items %}
-          <div class="d-flex bg-warning">
-            <img src="{{ item.img.url }}" alt="" style="width: 150px;">
-            <div class="mx-5 d-flex flex-column justify-content-center">
-              <h2>{{ item.title }}</h2>
-              <p>{{ item.content }}</p>
-              <p>{{ item.author }}</p>
-              <p>{{ item.created_on }}</p>
+          <a href="{% url 'blog_detail' item.id %}" style="text-decoration: none; color: black;">
+            <div class="d-flex bg-warning shadow-lg my-2" style="width: 50vw; max-height: 20vh; border-radius: 15px;">
+              <div class="col-4">
+                <img src="{{ item.img.url }}" alt="" style="max-height: 20vh; max-width: 20vw; border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+              </div>
+              <div class="col-8">
+                <div class="mx-5 d-flex flex-column justify-content-center p-3">
+                  <h2>{{ item.title }}</h2>
+                  <p class="text-truncate">{{ item.content }}</p>
+                  <p>{{ item.author }}</p>
+                  <p>{{ item.created_on }}</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
           {% endfor %}
         </div>
       </div>
