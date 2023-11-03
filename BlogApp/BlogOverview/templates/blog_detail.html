@@ -56,6 +56,12 @@
           </div>
           <p class="mb-5">{{ blog.content }}</p>
           <img src="{{ blog.img.url }}" alt="{{ blog.title }}" style="width: 20vw;">
+          <br>
+          {% if blog.video %}
+            <video controls style="width: 20vw;">
+              <source src="{{ blog.video.url }}" type="video/mp4">
+            </video>
+          {% endif %}
         </div>
       </div>
     </div>
